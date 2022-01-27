@@ -1,5 +1,5 @@
-import { localStorageKeyTheme, dataAttributeTheme, themes, defaultTheme } from './theme.config.js'
 import type { Theme, ThemeSource } from './theme.config.js'
+import { dataAttributeTheme, defaultTheme, localStorageKeyTheme, themes } from './theme.config.js'
 
 export function isValidTheme(theme: string): theme is Theme {
   return Object.prototype.hasOwnProperty.call(themes, theme)

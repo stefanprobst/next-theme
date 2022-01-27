@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import type { Theme, ThemeSource } from './theme.config.js'
 import { localStorageKeyTheme, themes } from './theme.config.js'

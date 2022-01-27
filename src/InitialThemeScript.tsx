@@ -1,6 +1,6 @@
 import HeadModule from 'next/head.js'
 
-import { localStorageKeyTheme, dataAttributeTheme, themes } from './theme.config.js'
+import { dataAttributeTheme, localStorageKeyTheme, themes } from './theme.config.js'
 
 /**
  * Nwxt.js only provides CommonJs exports.
