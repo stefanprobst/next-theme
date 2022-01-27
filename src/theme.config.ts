@@ -4,7 +4,7 @@ export type Theme = keyof typeof themes
 
 export const defaultTheme: Theme = 'light'
 
-export const dataAttributeTheme = 'color-scheme'
+export const dataAttributeTheme = 'colorScheme'
 
 export const themeSources = { system: 'system', user: 'user' } as const
 
