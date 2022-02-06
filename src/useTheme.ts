@@ -4,6 +4,12 @@ import type { Theme, ThemeSource } from './theme.config.js'
 import { localStorageKeyTheme, styleElementId, themes } from './theme.config.js'
 import { isValidTheme, themeStore } from './theme.js'
 
+const transition = `*, *::before, *::after {
+  transition-property: var(--color-scheme-transition-property) !important;
+  transition-duration: var(--color-scheme-transition-duration) !important;
+  transition-timing-function: var(--color-scheme-transition-timing-function) !important;
+}`
+
 export interface UseThemeResult {
   theme: Theme | null
   toggleTheme: () => void
@@ -15,9 +21,7 @@ export function useTheme(): UseThemeResult {
   function updateTheme(theme: Theme, themeSource: ThemeSource) {
     const element = document.getElementById(styleElementId) as HTMLStyleElement | null
     if (element?.sheet?.cssRules.length === 0) {
-      element.sheet.insertRule(
-        '*, *::before, *::after { transition: var(--color-scheme-transition) !important; }',
-      )
+      element.sheet.insertRule(transition)
     }
 
     setTheme(theme)
