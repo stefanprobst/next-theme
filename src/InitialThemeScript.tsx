@@ -1,6 +1,6 @@
 import HeadModule from 'next/head.js'
 
-import { dataAttributeTheme, localStorageKeyTheme, themes } from './theme.config.js'
+import { dataAttributeTheme, localStorageKeyTheme, styleElementId, themes } from './theme.config.js'
 
 /**
  * Nwxt.js only provides CommonJs exports.
@@ -25,6 +25,7 @@ export function InitialThemeScript(): JSX.Element {
   return (
     <Head>
       <script id="set-initial-theme" dangerouslySetInnerHTML={{ __html: setInitialThemeScript }} />
+      <style id={styleElementId} />
     </Head>
   )
 }

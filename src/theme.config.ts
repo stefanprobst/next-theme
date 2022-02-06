@@ -11,3 +11,5 @@ export const themeSources = { system: 'system', user: 'user' } as const
 export type ThemeSource = keyof typeof themeSources
 
 export const localStorageKeyTheme = '__color-scheme__'
+
+export const styleElementId = '__color-scheme__'
