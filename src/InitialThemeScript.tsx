@@ -28,7 +28,11 @@ if (
 export function InitialThemeScript(): JSX.Element {
   return (
     <Fragment>
-      <Script id="set-initial-theme" dangerouslySetInnerHTML={{ __html: setInitialThemeScript }} />
+      <Script
+        id="set-initial-theme"
+        dangerouslySetInnerHTML={{ __html: setInitialThemeScript }}
+        strategy="beforeInteractive"
+      />
       <Head>
         <style id={styleElementId} />
       </Head>
